@@ -1,0 +1,219 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hospital website</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> <strong>Med</strong>Sync </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+
+        <a href="#services">services</a>
+        
+        <a href="#appointment">appointment</a>
+       
+        
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="image/home-img.svg" alt="">
+    </div>
+    <div class="content">
+    <h3>We take care of your healthy life</h3>
+    
+    <div class="grid-container">
+        <a href="html/emergency.html" class="btn">ER (Emergency Room) <span class="fas fa-chevron-right"></span> </a><br>
+        <a href="html/bed_avail.html" class="btn">Bed Availability <span class="fas fa-chevron-right"></span> </a><br>
+        <a href="html/specializaion.html" class="btn">Specialization <span class="fas fa-chevron-right"></span> </a>
+    </div>
+
+
+</section>
+
+<!-- home section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>150+</h3>
+        <p>Collaborations</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>1030+</h3>
+        <p>Users</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>490+</h3>
+        <p>bed facility</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>100+</h3>
+        <p>available hospitals</p>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+<!-- about section starts  -->
+
+
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services</span> </h1>
+
+    <div class="box-container">
+
+        
+
+        <div class="box">
+            <i class="fas fa-ambulance"></i>
+            <h3>24/7 ambulance</h3>
+            
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-procedures"></i>
+            <h3>bed facility</h3>
+            
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>total care</h3>
+            
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+
+
+
+
+
+<section class="appointment" id="appointment">
+
+    <h1 class="heading"> <span>appointment</span> now </h1>    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/appointment-img.svg" alt="">
+        </div>
+
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+        
+      
+            <h3>make appointment</h3>
+            <input type="text"name="name" placeholder="Enter your Name" class="box">
+            <input type="number"name="number" placeholder="Enter desired Hospital" class="box">
+            <input type="email"name="email" placeholder="Your email" class="box">
+            <input type="email"name="email" placeholder="Problem you're facing" class="box">
+            <input type="date"name="date" class="box">
+            <input type="submit" name="submit" value="appointment now" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- appointmenting section ends -->
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
+            
+            <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
+            
+            <a href="#appointment"> <i class="fas fa-chevron-right"></i> appointment </a>
+            
+        </div>
+
+        
+
+        <div class="box">
+            <h3>appointment info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91 7777777777 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 9898989898 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> titans@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> sih@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra </a>
+        </div>
+
+        
+    </div>
+
+    <div class="credit"> created by <span>Tech Titans</span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<!-- js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

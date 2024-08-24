@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Bed Availability</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            text-transform: capitalize;
+            text-shadow: 3px 3px 5px rgba(36, 36, 36, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .hospital-grid {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        .hospital-grid th, .hospital-grid td {
+            padding: 15px;
+            border: 1px solid #16a085;
+            text-align: center;
+        }
+
+        .hospital-grid th {
+            background-color: #16a085;
+            color: #fff;
+        }
+
+        .available, .busy {
+            font-weight: bold;
+            color: #16a085;
+            animation: changeNumber 2s infinite alternate;
+        }
+
+        @keyframes changeNumber {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bed Availability</h1>
+
+    <table class="hospital-grid">
+        <tr>
+            <th>Hospital Name</th>
+            <th>Total Number of Beds</th>
+            <th>Available</th>
+            <th>Busy</th>
+        </tr>
+        <tr>
+            <td>City General Hospital</td>
+            <td>150</td>
+            <td class="available"></td>
+            <td class="busy"></td>
+        </tr>
+        <tr>
+            <td>St. Mary's Hospital</td>
+            <td>200</td>
+            <td class="available"></td>
+            <td class="busy"></td>
+        </tr>
+        <tr>
+            <td>Green Valley Clinic</td>
+            <td>250</td>
+            <td class="available"></td>
+            <td class="busy"></td>
+        </tr>
+        <tr>
+            <td>Metro Health Center</td>
+            <td>300</td>
+            <td class="available"></td>
+            <td class="busy"></td>
+        </tr>
+        <tr>
+            <td>Riverbend ER</td>
+            <td>180</td>
+            <td class="available"></td>
+            <td class="busy"></td>
+        </tr>
+        <tr>
+            <td>Highland Medical Facility</td>
+            <td>220</td>
+            <td class="available"></td>
+            <td class="busy"></td>
+        </tr>
+    </table>
+
+    <script>
+        function updateNumbers() {
+            const rows = document.querySelectorAll('.hospital-grid tr:not(:first-child)');
+            rows.forEach(row => {
+                const totalBeds = parseInt(row.children[1].textContent);
+                const available = row.querySelector('.available');
+                const busy = row.querySelector('.busy');
+                const availableBeds = Math.floor(Math.random() * totalBeds);
+                const busyBeds = totalBeds - availableBeds;
+
+                available.textContent = availableBeds;
+                busy.textContent = busyBeds;
+            });
+        }
+
+        setInterval(updateNumbers, 1000);
+        updateNumbers();
+    </script>
+
+</body>
+</html>
